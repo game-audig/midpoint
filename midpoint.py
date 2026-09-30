@@ -10,3 +10,9 @@ def median(values: list[float]) -> float:
     if len(ordered) % 2:
         return float(ordered[mid])
     return (ordered[mid - 1] + ordered[mid]) / 2
+
+
+def span(values: list[float]) -> float:
+    if not values:
+        raise ValueError("空列表没有跨度")
+    return max(values) - min(values)
