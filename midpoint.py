@@ -12,6 +12,12 @@ def median(values: list[float]) -> float:
     return (ordered[mid - 1] + ordered[mid]) / 2
 
 
+def mean(values: list[float]) -> float:
+    if not values:
+        raise ValueError("空列表没有平均数")
+    return sum(values) / len(values)
+
+
 def span(values: list[float]) -> float:
     if not values:
         raise ValueError("空列表没有跨度")
