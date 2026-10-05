@@ -22,3 +22,9 @@ def span(values: list[float]) -> float:
     if not values:
         raise ValueError("空列表没有跨度")
     return max(values) - min(values)
+
+
+def nearest(values: list[float], target: float) -> float:
+    if not values:
+        raise ValueError("空列表没有最近值")
+    return min(values, key=lambda value: (abs(value - target), value))
