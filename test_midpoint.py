@@ -1,6 +1,6 @@
 import unittest
 
-from midpoint import mean, median, span
+from midpoint import mean, median, nearest, span
 
 
 class MidpointTest(unittest.TestCase):
@@ -13,6 +13,9 @@ class MidpointTest(unittest.TestCase):
             mean([])
         with self.assertRaises(ValueError):
             median([])
+        self.assertEqual(nearest([1, 4, 9], 5), 4)
+        with self.assertRaises(ValueError):
+            nearest([], 1)
 
 
 if __name__ == "__main__":
