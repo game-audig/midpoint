@@ -34,3 +34,9 @@ def farthest(values: list[float], target: float) -> float:
     if not values:
         raise ValueError("空列表没有最远值")
     return max(values, key=lambda value: (abs(value - target), value))
+
+
+def covers(values: list[float], target: float) -> bool:
+    if not values:
+        raise ValueError("空列表没有跨度")
+    return min(values) <= target <= max(values)
