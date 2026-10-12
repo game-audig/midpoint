@@ -1,6 +1,6 @@
 import unittest
 
-from midpoint import covers, farthest, mean, median, nearest, span
+from midpoint import below, covers, farthest, mean, median, nearest, span
 
 
 class MidpointTest(unittest.TestCase):
@@ -19,6 +19,7 @@ class MidpointTest(unittest.TestCase):
             nearest([], 1)
         self.assertTrue(covers([1, 4, 9], 5))
         self.assertFalse(covers([1, 4, 9], 0))
+        self.assertEqual(below([1, 4, 9], 5), 2)
 
 
 if __name__ == "__main__":
