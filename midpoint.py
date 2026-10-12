@@ -40,3 +40,7 @@ def covers(values: list[float], target: float) -> bool:
     if not values:
         raise ValueError("空列表没有跨度")
     return min(values) <= target <= max(values)
+
+
+def below(values: list[float], target: float) -> int:
+    return sum(1 for value in values if value < target)
