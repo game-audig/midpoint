@@ -44,3 +44,7 @@ def covers(values: list[float], target: float) -> bool:
 
 def below(values: list[float], target: float) -> int:
     return sum(1 for value in values if value < target)
+
+
+def above(values: list[float], target: float) -> int:
+    return sum(1 for value in values if value > target)
