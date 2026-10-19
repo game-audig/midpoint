@@ -48,3 +48,7 @@ def below(values: list[float], target: float) -> int:
 
 def above(values: list[float], target: float) -> int:
     return sum(1 for value in values if value > target)
+
+
+def equal_count(values: list[float], target: float) -> int:
+    return sum(1 for value in values if value == target)
