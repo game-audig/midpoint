@@ -52,3 +52,7 @@ def above(values: list[float], target: float) -> int:
 
 def equal_count(values: list[float], target: float) -> int:
     return sum(1 for value in values if value == target)
+
+
+def both_sides(values: list[float], target: float) -> bool:
+    return below(values, target) > 0 and above(values, target) > 0
