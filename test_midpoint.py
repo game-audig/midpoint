@@ -1,6 +1,6 @@
 import unittest
 
-from midpoint import above, below, both_sides, covers, equal_count, farthest, mean, median, nearest, span
+from midpoint import above, below, both_sides, covers, equal_count, farthest, mean, median, nearest, off_count, span
 
 
 class MidpointTest(unittest.TestCase):
@@ -24,6 +24,8 @@ class MidpointTest(unittest.TestCase):
         self.assertEqual(equal_count([1, 5, 5, 9], 5), 2)
         self.assertTrue(both_sides([1, 4, 9], 5))
         self.assertFalse(both_sides([1, 4], 5))
+        self.assertEqual(off_count([1, 5, 9], 5), 2)
+        self.assertEqual(off_count([5, 5], 5), 0)
 
 
 if __name__ == "__main__":
