@@ -60,3 +60,7 @@ def both_sides(values: list[float], target: float) -> bool:
 
 def off_count(values: list[float], target: float) -> int:
     return below(values, target) + above(values, target)
+
+
+def none_hit(values: list[float], target: float) -> bool:
+    return bool(values) and off_count(values, target) == len(values)
