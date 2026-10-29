@@ -64,3 +64,6 @@ def off_count(values: list[float], target: float) -> int:
 
 def none_hit(values: list[float], target: float) -> bool:
     return bool(values) and off_count(values, target) == len(values)
+
+def all_hit(values: list[float], target: float) -> bool:
+    return bool(values) and off_count(values, target) == 0
