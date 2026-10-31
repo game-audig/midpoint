@@ -67,3 +67,6 @@ def none_hit(values: list[float], target: float) -> bool:
 
 def all_hit(values: list[float], target: float) -> bool:
     return bool(values) and off_count(values, target) == 0
+
+def some_hit(values: list[float], target: float) -> bool:
+    return equal_count(values, target) > 0
